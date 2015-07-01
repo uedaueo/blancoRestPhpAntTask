@@ -94,7 +94,7 @@
 		<jar destfile="${project.main.jar}">
 			<zipfileset dir="doc" prefix="doc" />
 			<!-- classの取り込み (※sampleは除外) -->
-			<zipfileset dir="bin" includes="**/*" excludes="blanco/sample/**" />
+			<zipfileset dir="bin" includes="**/*" excludes="blanco/sample/**, blanco/restphp/task/BlancoRestPhpProcessImpl.class" />
 			<!-- Javaソースコード(通常)の取り込み (※sampleは除外) -->
 			<zipfileset dir="src" includes="**/*" prefix="src" excludes="blanco/sample/**" />
 			<!-- Javaソースコード(自動生成)の取り込み (※sampleは除外) -->
