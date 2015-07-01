@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- blancoCalcParser define file for blancoAntTask -->
+<blanco version="0.1.0">
+  <target name="blancoCalcParser">
+    <blancocalcparser name="anttask">
+      <propertyblock name="blancoanttask-common" waitY="1">
+        <startstring>AntTask定義・共通</startstring>
+        <propertykey name="taskName" waitX="2">
+          <value>タスク名</value>
+        </propertykey>
+        <propertykey name="packageName" waitX="2">
+          <value>パッケージ</value>
+        </propertykey>
+        <propertykey name="description" waitX="2">
+          <value>説明</value>
+        </propertykey>
+        <propertykey name="suffix" waitX="2">
+          <value>サフィックス</value>
+        </propertykey>
+      </propertyblock>
+
+      <tableblock name="blancoanttask-list" waitY="2" titleheight="3" rowname="attribute">
+        <startstring>AntTask定義・アトリビュート一覧</startstring>
+
+        <tablecolumn name="no">
+          <value>No.</value>
+        </tablecolumn>
+        <tablecolumn name="attribute">
+          <value>アトリビュート</value>
+        </tablecolumn>
+        <tablecolumn name="type">
+          <value>型</value>
+        </tablecolumn>
+        <tablecolumn name="require">
+          <value>必須</value>
+        </tablecolumn>
+        <tablecolumn name="default">
+          <value>デフォルト</value>
+        </tablecolumn>
+        <tablecolumn name="description">
+          <value>説明</value>
+        </tablecolumn>
+
+        <valuemapping>
+          <result>true</result>
+          <source>○</source>
+        </valuemapping>
+
+        <valuemapping>
+          <result>blanco:string</result>
+          <source>文字列</source>
+        </valuemapping>
+        <valuemapping>
+          <result>blanco:int</result>
+          <source>整数(int)</source>
+        </valuemapping>
+        <valuemapping>
+          <result>blanco:long</result>
+          <source>整数(long)</source>
+        </valuemapping>
+        <valuemapping>
+          <result>blanco:decimal</result>
+          <source>数値(decimal)</source>
+        </valuemapping>
+        <valuemapping>
+          <result>blanco:boolean</result>
+          <source>真偽</source>
+        </valuemapping>
+      </tableblock>
+
+    </blancocalcparser>
+  </target>
+</blanco>

@@ -1,0 +1,165 @@
+2012.05.28 (0.7.5.1)
+  ソース・パッケージングのためにビルドしなおし。
+
+2009.07.21 (0.7.5)
+  ファイル・ヘッダーを blancoCg にゆだねるようにする。
+  jar ファイル類の更新。
+
+2008.12.12 (0.7.4)
+  blancoValueObject の jar ファイルを更新。
+  execute メソッドに @Override アノテーションを追加。
+
+2008.12.12 (0.7.3)
+  jarファイル類を更新。
+  生成される Ant タスクの JavaDoc コメントに一部間違いがあったので修正。
+
+2008.11.22 (0.7.2)
+  ソースファイルの文字エンコーディング指定機能を追加。
+
+2008.10.24 (0.7.1)
+  JDK 1.5 対応。
+
+2007.12.23 (0.6.1) Eclipse 3.3 対策
+  ※今回に限り pluginのみバージョン番号採番のうえリリースします。
+  (plugin)バージョン番号を採番更新。
+  (plugin) workbenchMonitorを利用するのを停止しました。
+    →これは、Eclipse 3.3 で workbenchMonitor を利用すると org.eclipse.swt.SWTException: Invalid thread access が発生してしまうので、これを避けるためです。
+  (plugin)about.htmlを更新。
+  (plugin)build.xmlを更新。
+  (plugin)plugin.xmlの再生成
+  (plugin)ウィザードの生成ディレクトリに関する記述を更新 (Blanco*WizardPage4)
+  (jar)jarファイル類を更新チェック。
+
+2007.12.07 (0.6.0) RC1
+  安定版と位置づけ。
+  jxl.htmlをdocフォルダに配置。
+  blancoフォルダを再生成 (ぽろぽろと不具合を発見)
+
+2007.12.06 (0.5.1) 実験的
+  バリューオブジェクトの java.util.ArrayListフィールドを java.util.Listに変更(!)
+  blancoValueObject最新版を取り込み。
+  「処理」クラスを Antタスクから直接呼び出すように変更。
+  (削除)BlancoAntTaskMessageResourceBundle.xls
+  (削除)BlancoAntTaskMessageResourceBundle.java
+
+2007.12.03 (0.5.0) 実験的
+  実験的ビルド！
+  処理(Process)インタフェース導入を検討
+
+2007.11.16 (0.4.0) 安定版
+  longとdecimalのパース失敗例外処理が甘かったので修正。
+  readme.txtを改善。
+  (jar)blancoBatchProcessを更新。
+  (様式)様式を更新！
+
+2007.11.15 (0.3.6) 開発版
+  verboseというスイッチは booleanであるように変更。
+  →Apache Antは booleanセッターに対応していることが判明。
+  サンプルAntタスクを追加。
+  デフォルト値のセット方法は バリューオブジェクトのデフォルト値で実現するように変更しました。
+
+2007.11.05 (0.3.5) 開発版
+  (jar)blancoBatchProcessを更新しました。
+  verboseについてboolean化。
+  (型対応)型対応が開発途上状態。
+  (サンプル)サンプルAntTaskを作成すべきです。
+
+2007.11.03 (0.3.4) 開発版
+  (jar)blancoBatchProcessを更新しました。
+
+2007.11.02 (0.3.3) 開発版
+  (jar)blancoBatchProcess, blancoResourceBundleを更新しました。
+
+2007.10.26 (0.3.2) 開発版
+  XmlParser: parseFile, parseDocumentは parseにメソッド名を統一。
+
+2007.10.25 (0.3.1) 開発版
+  このバージョンから、以前の blancoAntTaskとの互換性が無くなっています。
+  blancoBatchProcess組み込み。
+  (削除) BlancoAntTaskTask.java (名前が衝突するため)
+  (削除) meta/anttaskを削除 (他のプロダクトと階層を統一)
+  TODO 小文字タスク名を与えた場合の挙動をチェックすること。
+  TODO このAntタスクの javacの下記具合について、blancoAntに反映させること。
+
+2007.10.19 (0.3.0) 開発版
+  (jar)jarファイル類を更新。
+  BlancoXmlBindingベースへとソースコードを変更。
+  Parse専用のクラスを作成。リファクタリングを実施。
+  TODO Commandというクラスを新たに生成するように変更する予定。
+  TODO AntTaskクラスを Commandクラスに依存するように変更する予定。
+  TODO metaの階層構造を見直すこと。
+  TODO メッセージ定義書を作成すること。
+
+2006.10.23 (0.2.4)
+  (plugin)Eclipseプラグイン版を新規作成。
+  jarファイル類の更新
+  readme.txtの更新。
+  todo.txtを削除
+
+2006.10.19 (0.2.3)
+  verboseモードの際には通常例外時にもスタックとレースを出力するようにする。
+  attributeがnullの場合に動作不具合があるのを修正。
+  blancoCodeGeneratorへの依存を完全に削除。
+
+2006.10.18 (0.2.2)
+  blancoCodeGeneratorへの依存を削除。
+
+2006.10.18 (0.2.1)
+  (定義書)readmeシートを削除しました。doc形式の記入要領を正とする運用です。
+  (blancoCommons)JExcelApi 2.6が ×をカタカナに読み間違える不具合に対応 (blancoCommons版)。
+    (具体的には jxl-2.6blanco.jar + blancoCommons 1.0.1以降を利用。)
+  (jexcelapi)JExcelApi 2.6が Sun Java2 SE 1.4.2_12 で動作しない不具合に対応。
+    (具体的には JExcelApiのjarファイルにパッチを適用した jxl-2.6blanco.jarを利用開始)
+  定数定義、リソースバンドル定義を blancoMessageを参考に改善。
+  jarファイル類の更新。
+  バージョン番号をAntコンソールに出力する機能を追加。
+  verboseスイッチを出力するように機能追加。
+
+2006.05.01 (0.2.0)
+  blancoCodeGenerator第二世代版に対応。
+  jarファイル類を更新。
+
+2006.03.30 (0.1.1)
+  jarファイル類を更新。
+  JDK 1.5でコンパイルできることを確認。
+
+2006.02.14 (0.1.0)
+  リビジョンアップリリース。一旦これを安定版と位置づけます。
+  readme.txtを少しだけ改善しました。
+
+2006.02.13 (0.0.10)
+  一通りのリソースバンドル対応を実施。
+  File.listFiles が nullを返却する可能性に対応。
+  【削除】BlancoAntTask.xls (理由：BlancoAntTaskResourceBundle.xlsに名前変更)
+
+2006.02.03 (0.0.9)
+  デフォルト値をソースコードに埋め込む際にソースとして適切にエスケープするようバグ修正。
+
+2006.02.02 (0.0.8)
+  jarファイル類を更新しました。
+
+2006.01.26 (0.0.7)
+  jarファイルを更新。
+  【削除】BlancoAntTaskMeta2Xml.java
+
+2006.01.04 (0.0.6)
+  「説明」が空の場合にNullPointerException例外が発生する不具合を修正。
+  blancoResourceBundleのjarファイルを更新
+
+2005.12.27 (0.0.5)
+  中間メタXMLファイルのエレメント名に不具合があったので これを修正。
+  blancoCommonsのjarファイルを更新。
+  JavaDocを改善。
+
+2005.12.09 (0.0.4)
+  必須とデフォルトのいずれか一方は設定しないといけないという制約は具合が悪いことが判明。
+  これを解除する。
+
+2005.12.09 (0.0.3)
+  Excel様式を微調整
+
+2005.12.09 (0.0.2)
+  微調整
+
+2005.12.08 (0.0.1)
+  新規作成
